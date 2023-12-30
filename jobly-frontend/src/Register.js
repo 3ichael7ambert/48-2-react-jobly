@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'; // Correct import
+import { useNavigate } from 'react-router-dom'; // Correct import
 import { registerUser } from './api'; // Correct import
 import './Register.css';
 
 const Register = () => {
-  const history = useHistory();
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -30,7 +30,7 @@ const Register = () => {
       console.log('Registration successful. Token:', token);
 
       // Redirect to the login page or any other page after successful registration
-      history.push('/login');
+      navigate('/login'); // Use navigate instead of history.push
     } catch (error) {
       console.error('Registration failed:', error);
       // Handle registration error, e.g., show an error message to the user

@@ -32,7 +32,7 @@ body {
 }
 
 nav {
-  z-index: 20000;
+  z-index: 200;
   display: flex;
   justify-content: space-between; /* Align items at the start and end */
   align-items: center; /* Center items vertically */

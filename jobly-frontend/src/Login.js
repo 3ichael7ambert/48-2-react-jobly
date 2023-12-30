@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { loginUser } from './api';
 import './Login.css';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -10,14 +14,15 @@ const Login = () => {
     try {
       const token = await loginUser(username, password);
       console.log('Token:', token);
-      // Store the token in your app's state or context for future use
+      navigate('/');
+      // Store the token 
     } catch (error) {
       console.error('Login failed:', error.message);
     }
   };
 
   return (
-    <div>
+    <div className="Login">
       <h2>Login</h2>
       <input
         type="text"

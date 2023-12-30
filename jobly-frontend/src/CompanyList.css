@@ -10,12 +10,12 @@
 }
 
 .CompanyList h2 {
-  color: #333; /* Customize the color for h2 */
+  color: #333; 
 }
 
 .CompanyList ul {
   list-style-type: none;
-  padding: 0; /* Remove default padding for the ul element */
+  padding: 0; 
 }
 
 .CompanyCard {
@@ -50,4 +50,9 @@ z-index: -10100;
   height: 100%;
   z-index: -1;
   background: linear-gradient(45deg, #4caf50, #2196f3);
+}
+
+.CompanyLink {
+  text-decoration: none;
+  color:#ddd;
 }

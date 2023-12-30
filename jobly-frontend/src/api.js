@@ -20,7 +20,7 @@ const request = async (endpoint, data = {}, method = "get", token) => {
   }
 };
 
-// Example API routes
+
 const getCompany = async (handle, token) => {
   let res = await request(`companies/${handle}`, {}, "get", token);
   return res.company;
@@ -31,9 +31,42 @@ const getCompanies = async (token) => {
   return res.companies;
 };
 
+const searchCompanies = async (searchTerm, token) => {
+  let res = await request(`companies/${searchTerm}`, {}, "get", token);
+  return res.companies || [];
+};
+
+
+
+
 const getJobs = async (token) => {
   let res = await request('jobs', {}, "get", token);
   return res.jobs;
 };
 
-export { getCompany, getCompanies, getJobs };
+const searchJobs = async (searchTerm, token) => {
+  let res = await request(`jobs/${searchTerm}`, {}, "get", token);
+  return res.jobs || [];
+};
+
+const loginUser = async (username, password) => {
+  let res = await request('auth/token', { username, password }, 'post');
+  return res.token;
+};
+
+const registerUser = async (userData) => {
+  let res = await request('auth/register', userData, 'post');
+  return res.token;
+};
+
+const getJob = async (id, token) => {
+  let res = await request(`jobs/${id}`, {}, "get", token);
+  return res.job;
+};
+
+const updateProfile = async (userData, token) => {
+  let res = await request('profile', userData, 'patch', token);
+  return res.user;
+};
+
+export { getCompany, getCompanies, getJobs, getJob, loginUser, registerUser, updateProfile, searchCompanies,searchJobs };
