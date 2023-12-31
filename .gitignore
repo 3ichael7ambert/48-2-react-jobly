@@ -1,3 +1,6 @@
 jobly-backend/node_modules
 jobly-frontend/node_modules
 node_modules
+
+jobly-backend/.git
+jobly-frontend/.git
