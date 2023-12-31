@@ -45,4 +45,5 @@ npm install react-router-dom@latest
 npm start
 npm audit 
 npm audit fix --force
+pg_dump -O jobly | psql postgres://vwhqtnrz:niOmoQncGquMjp3Wij-Yz7BXOUOxz1QB@mahmud.db.elephantsql.com/vwhqtnrz
 ```
