@@ -45,5 +45,28 @@ npm install react-router-dom@latest
 npm start
 npm audit 
 npm audit fix --force
-pg_dump -O jobly | psql postgres://vwhqtnrz:niOmoQncGquMjp3Wij-Yz7BXOUOxz1QB@mahmud.db.elephantsql.com/vwhqtnrz
 ```
+
+```bash
+pg_dump -O jobly | psql postgres://vwhqtnrz:niOmoQncGquMjp3Wij-Yz7BXOUOxz1QB@mahmud.db.elephantsql.com/vwhqtnrz
+psql postgres://vwhqtnrz:niOmoQncGquMjp3Wij-Yz7BXOUOxz1QB@mahmud.db.elephantsql.com/vwhqtnrz
+```
+
+```bash
+npm install --global surge
+
+```
+
+```js
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+```
+
+```bash
+REACT_APP_BASE_URL=https://jobly-backend-ne6n.onrender.com npm run build
+cp build/index.html build/200.html
+surge build
+```
+
+[FRONTEND](windy-trousers.surge.sh)
+
+[BACKEND](https://jobly-backend-ne6n.onrender.com)

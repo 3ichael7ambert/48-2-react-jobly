@@ -1,0 +1,6 @@
+[submodule "jobly-backend"]
+	path = jobly-backend
+	url = https://github.com/3ichael7ambert/jobly-backend
+[submodule "jobly-frontend"]
+	path = jobly-frontend
+	url = https://github.com/3ichael7ambert/jobly-frontend
